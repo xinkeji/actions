@@ -1,0 +1,3 @@
+[submodule "Sources/YouTubeHeader"]
+	path = Sources/YouTubeHeader
+	url = https://github.com/PoomSmart/YouTubeHeader.git
