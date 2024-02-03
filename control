@@ -1,0 +1,10 @@
+Package: com.miro.uYouButtonFix
+Name: uYouButtonFix
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: uYouButtonFix
+Depiction:
+Maintainer: arichornlover
+Author: arichornlover
+Section: Tweaks
+Depends: mobilesubstrate
