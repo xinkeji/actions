@@ -6,10 +6,10 @@ ARCHS = arm64
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = uYouButtonFix
+TWEAK_NAME = YTNoHoverCards
 
-uYouButtonFix_FILES = Tweak.x
-uYouButtonFix_CFLAGS = -fobjc-arc
-uYouButtonFix_LOGOS_DEFAULT_GENERATOR = internal
+YTNoHoverCards_FILES = Tweak.x
+YTNoHoverCards_CFLAGS = -fobjc-arc
+YTNoHoverCards_LOGOS_DEFAULT_GENERATOR = internal
 
 include $(THEOS_MAKE_PATH)/tweak.mk
