@@ -1,7 +1,7 @@
-TARGET := iphone:clang:latest:7.0
+TARGET := iphone:clang:16.2:14.0
 INSTALL_TARGET_PROCESSES = YouTube
 
-ARCHS = armv7 armv7s arm64 arm64e
+ARCHS = arm64 arm64e
 
 THEOS_DEVICE_IP = 10.12.3.128
 
