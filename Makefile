@@ -6,10 +6,11 @@ ARCHS = arm64
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = YTNoHoverCards
+TWEAK_NAME = uYouPlus
 
-YTNoHoverCards_FILES = Tweak.x
-YTNoHoverCards_CFLAGS = -fobjc-arc
-YTNoHoverCards_LOGOS_DEFAULT_GENERATOR = internal
+$(TWEAK_NAME)_FILES := $(wildcard Sources/*.xm) $(wildcard Sources/*.x)
+$(TWEAK_NAME)_FRAMEWORKS = UIKit Security
+$(TWEAK_NAME)_CFLAGS = -fobjc-arc
+
 
 include $(THEOS_MAKE_PATH)/tweak.mk
