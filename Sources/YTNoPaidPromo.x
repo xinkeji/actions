@@ -1,5 +1,5 @@
-#import "../Tweaks/YouTubeHeader/YTPlayerOverlayProvider.h"
-#import "../Tweaks/YouTubeHeader/YTPlayerOverlay.h"
+#import "Tweaks/YouTubeHeader/YTPlayerOverlayProvider.h"
+#import "Tweaks/YouTubeHeader/YTPlayerOverlay.h"
 #import "uYouPlus.h"
 
 // YTNoPaidPromo: https://github.com/PoomSmart/YTNoPaidPromo
