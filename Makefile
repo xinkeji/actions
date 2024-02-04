@@ -3,6 +3,10 @@ INSTALL_TARGET_PROCESSES = YouTube
 
 ARCHS = arm64
 
+ifndef YOUTUBE_VERSION
+YOUTUBE_VERSION = 19.04.3
+endif
+PACKAGE_VERSION = $(YOUTUBE_VERSION)
 
 include $(THEOS)/makefiles/common.mk
 
