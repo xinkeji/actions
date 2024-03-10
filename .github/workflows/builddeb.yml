@@ -1,6 +1,6 @@
 # This has been created by @lillieH1000
 
-name: Build
+name: Build Deb
 
 on:
   workflow_dispatch:
