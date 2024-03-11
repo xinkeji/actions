@@ -50,10 +50,10 @@ jobs:
 
       - name: Build Package 
         run: |
-          cd ${{ github.workspace }}
+          cd ${{ github.workspace }}/main
           gmake
 
       - name: Upload a Build Hiepvk
         uses: actions/upload-artifact@v4.3.0
         with:
-          path: packages/*.deb
+          path: main/packages/*.deb
