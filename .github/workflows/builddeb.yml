@@ -1,6 +1,4 @@
-# This has been created by @lillieH1000
-
-name: Build Deb
+name: Build the deb
 
 on:
   workflow_dispatch:
@@ -9,51 +7,39 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Checkout Main
-        uses: actions/checkout@v4.1.1
-        with:
-          repository: hiepvk/deb
-          submodules: recursive
-          
-      - name: Install Dependencies
-        run: brew install ldid dpkg make
-        
-      - name: Set PATH environment variable
-        run: echo "$(brew --prefix make)/libexec/gnubin" >> $GITHUB_PATH 
+      - uses: actions/checkout@main
 
-      - name: Setup Theos
-        uses: actions/checkout@v4.1.1
+      - name: Checkout theos/theos
+        uses: actions/checkout@main
         with:
           repository: theos/theos
           ref: master
-          path: theos
           submodules: recursive
+          path: theos
 
-      - name: Caching
-        id: SDK
-        uses: actions/cache@v4.0.0
-        env:
-          cache-name: iOS-16.5-SDK
+      - name: Checkout chrisharper22/sdks
+        uses: actions/checkout@main
         with:
-          path: theos/sdks/
-          key: ${{ env.cache-name }}
-      
-      - name: Download iOS 16.5 SDK
-        if: steps.SDK.outputs.cache-hit != 'true'
-        run: |
-          git clone -n --depth=1 --filter=tree:0 https://github.com/theos/sdks.git && cd sdks
-          git sparse-checkout set --no-cone iPhoneOS16.5.sdk
-          git checkout
-          mv *.sdk $THEOS/sdks
-        env:
-          THEOS: ${{ github.workspace }}/theos
+          repository: chrisharper22/sdks
+          ref: main
+          sparse-checkout: iPhoneOS16.2.sdk
+          path: theos/sdks
+          
+      - name: Checkout PoomSmart/YouTubeHeader
+        uses: actions/checkout@main
+        with:
+          repository: PoomSmart/YouTubeHeader
+          ref: main
+          path: Tweaks/YouTubeHeader
 
       - name: Build Package 
         run: |
+          brew install make xz ldid 
           export THEOS=theos
           gmake clean package FINALPACKAGE=1
+          gmake clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
 
-      - name: Upload a Build Hiepvk
-        uses: actions/upload-artifact@v4.3.0
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.1
         with:
-          path: main/packages/*.deb
+          path: packages/*.deb
