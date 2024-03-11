@@ -108,7 +108,7 @@ static NSString *accessGroupID() {
         return YT_NAME;
     return %orig;
 }
-// Fix Google Sign in by @PoomSmart & @level3tjg (qnblackcat/Hiepvk#684)
+// Fix Google Sign in by @PoomSmart & @level3tjg
 - (NSDictionary *)infoDictionary {
     NSMutableDictionary *info = %orig.mutableCopy;
     NSString *altBundleIdentifier = info[@"ALTBundleIdentifier"];
@@ -232,9 +232,6 @@ static NSString *accessGroupID() {
 
 //ex
 %ctor {
-    // Load uYou first so its functions are available for hooks.
-    // dlopen([[NSString stringWithFormat:@"%@/Frameworks/uYou.dylib", [[NSBundle mainBundle] bundlePath]] UTF8String], RTLD_LAZY);
-
     %init;
 
     // Change the default value of some options

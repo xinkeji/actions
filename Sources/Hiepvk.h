@@ -72,49 +72,10 @@
 - (id)slimMetadataButtonRenderer;
 @end
 
-// iOS16 fix
-@interface OBPrivacyLinkButton : UIButton
-- (instancetype)initWithCaption:(NSString *)caption
-                     buttonText:(NSString *)buttonText
-                          image:(UIImage *)image
-                      imageSize:(CGSize)imageSize
-                   useLargeIcon:(BOOL)useLargeIcon
-                displayLanguage:(NSString *)displayLanguage;
-@end
-
-// Fix uYou's appearance not updating if the app is backgrounded
-@interface DownloadsPagerVC : UIViewController
-- (NSArray<UIViewController *> *)viewControllers;
-- (void)updatePageStyles;
-@end
-@interface DownloadingVC : UIViewController
-- (void)updatePageStyles;
-- (UITableView *)tableView;
-@end
-@interface DownloadingCell : UITableViewCell
-- (void)updatePageStyles;
-@end
-@interface DownloadedVC : UIViewController
-- (void)updatePageStyles;
-- (UITableView *)tableView;
-@end
-@interface DownloadedCell : UITableViewCell
-- (void)updatePageStyles;
-@end
-@interface UILabel (uYou)
-+ (id)_defaultColor;
-@end
 // YTAutoFullScreen
 @interface YTPlayerViewController (YTAFS)
 - (void)autoFullscreen;
-// YTSpeed
-@property id activeVideo;
-@property float playbackRate;
-- (void)singleVideo:(id)video playbackRateDidChange:(float)rate;
-// uYouCrashFix
-- (YTSingleVideoController *)activeVideo;
 @end
-
 //
 @interface _ASDisplayView : UIView
 @end
