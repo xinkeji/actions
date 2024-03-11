@@ -51,7 +51,7 @@ jobs:
       - name: Build Package 
         run: |
           export THEOS=theos
-          gmake clean package FINALPACKAGE=1
+          gmake package FINALPACKAGE=1
 
       - name: Upload a Build Hiepvk
         uses: actions/upload-artifact@v4.3.0
