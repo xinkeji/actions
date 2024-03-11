@@ -50,7 +50,7 @@ jobs:
 
       - name: Build Package 
         run: |
-          export THEOS=theos
+          cd ${{ github.workspace }}
           gmake
 
       - name: Upload a Build Hiepvk
