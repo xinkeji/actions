@@ -38,6 +38,19 @@
 
 %end
 
+//PlayableInBackground
+%hook YTIPlayabilityStatus
+
+- (BOOL)isPlayableInBackground { return YES; }
+
+%end
+
+%hook MLVideo
+
+- (BOOL)playableInBackground { return YES; }
+
+%end
+
 //YTNoPaidPromo
 %hook YTMainAppVideoPlayerOverlayViewController
 
