@@ -41,13 +41,13 @@
 //PlayableInBackground
 %hook YTIPlayabilityStatus
 
-- (BOOL)isPlayableInBackground { return IS_ENABLED(@"backgroundPlayback") ? YES : NO; }
+- (BOOL)isPlayableInBackground { return IS_ENABLED(@"backgroundPlayback_enabled") ? YES : NO; }
 
 %end
 
 %hook MLVideo
 
-- (BOOL)playableInBackground { return IS_ENABLED(@"backgroundPlayback") ? YES : NO; }
+- (BOOL)playableInBackground { return IS_ENABLED(@"backgroundPlayback_enabled") ? YES : NO; }
 
 %end
 
