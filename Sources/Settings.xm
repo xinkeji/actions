@@ -82,7 +82,9 @@ extern NSBundle *HiepvkBundle();
 
     //Hide
     SWITCH_ITEM2(LOC(@"HIDE_HOVER_CARD"), LOC(@"HIDE_HOVER_CARD_DESC"), @"hideHoverCards_enabled");
-    SWITCH_ITEM2(LOC(@"UN_SHORTS"), LOC(@"UN_SHORTS_DESC"), @"un_shorts_enabled");
+
+    SWITCH_ITEM2(LOC(@"HIDE_HOVER_CARD"), LOC(@"HIDE_HOVER_CARD_DESC"), @"hideHoverCards_enabled");
+    SWITCH_ITEM(LOC(@"UN_SHORTS"), LOC(@"UN_SHORTS_DESC"), @"un_shorts_enabled");
     SWITCH_ITEM2(LOC(@"HIDE_SUPER_THANKS"), LOC(@"HIDE_SUPER_THANKS_DESC"), @"hideBuySuperThanks_enabled");
     SWITCH_ITEM2(LOC(@"HIDE_SUBCRIPTIONS"), LOC(@"HIDE_SUBCRIPTIONS_DESC"), @"hideSubcriptions_enabled");
     SWITCH_ITEM2(LOC(@"DISABLE_RESUME_TO_SHORTS"), LOC(@"DISABLE_RESUME_TO_SHORTS_DESC"), @"disableResumeToShorts");
