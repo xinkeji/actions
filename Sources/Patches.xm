@@ -13,29 +13,28 @@
 %end
 
 // Workaround
-%hook YTDataUtils
-+ (id)spamSignalsDictionary { return nil; }
-+ (id)spamSignalsDictionaryWithoutIDFA { return nil; }
-%end
+//%hook YTDataUtils
+//+ (id)spamSignalsDictionary { return nil; }
+//+ (id)spamSignalsDictionaryWithoutIDFA { return //nil; }
+//%end
 
 // https://github.com/PoomSmart/YouTube-X
+// Disable Ads
+%hook YTIPlayerResponse
+- (BOOL)isMonetized { return IS_ENABLED(@"noAds_enabled") ? NO : YES; }
+%end
+
+%hook YTDataUtils
++ (id)spamSignalsDictionary { return IS_ENABLED(@"noAds_enabled") ? nil : %orig; }
++ (id)spamSignalsDictionaryWithoutIDFA { return IS_ENABLED(@"noAds_enabled") ? nil : %orig; }
+%end
+
 %hook YTAdsInnerTubeContextDecorator
-- (void)decorateContext:(id)context {}
+- (void)decorateContext:(id)context { if (!IS_ENABLED(@"noAds_enabled")) %orig; }
 %end
 
 %hook YTAccountScopedAdsInnerTubeContextDecorator
-
-- (void)decorateContext:(id)context {}
-
-%end
-
-%hook YTIElementRenderer
-
-- (NSData *)elementData {
-    if (self.hasCompatibilityOptions && self.compatibilityOptions.hasAdLoggingData) return nil;
-    return %orig;
-}
-
+- (void)decorateContext:(id)context { if (!IS_ENABLED(@"noAds_enabled")) %orig; }
 %end
 
 //PlayableInBackground
