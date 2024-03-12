@@ -3,7 +3,6 @@ name: Build the deb
 on:
   workflow_dispatch:
     inputs:
-      uyou_version:
       app_name:
         description: "Name deb"
         default: "Hiepvk"
