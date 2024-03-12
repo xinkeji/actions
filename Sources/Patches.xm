@@ -23,6 +23,21 @@
 - (void)decorateContext:(id)context {}
 %end
 
+%hook YTAccountScopedAdsInnerTubeContextDecorator
+
+- (void)decorateContext:(id)context {}
+
+%end
+
+%hook YTIElementRenderer
+
+- (NSData *)elementData {
+    if (self.hasCompatibilityOptions && self.compatibilityOptions.hasAdLoggingData) return nil;
+    return %orig;
+}
+
+%end
+
 //YTNoPaidPromo
 %hook YTMainAppVideoPlayerOverlayViewController
 
