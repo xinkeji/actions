@@ -9,8 +9,9 @@
 "RESTART_YOUTUBE" = "Restart YouTube to apply changes";
 
 // Hide
-"PLAY_BACK" = "Phát trong nền";
-"PLAY_BACK_DESC" = "Cho phép phát trong nền";
+
+"PLAY_BACK" = "Background playback";
+"PLAY_BACK_DESC" = "Enables background playback.";
 
 "HIDE_HOVER_CARD" = "Hide End screens hover cards (YTNoHoverCards)";
 "HIDE_HOVER_CARD_DESC" = "Hide the creator End screens (thumbnails) at the end of videos.";
