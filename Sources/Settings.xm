@@ -81,7 +81,7 @@ extern NSBundle *HiepvkBundle();
     [sectionItems addObject:exitYT];
 
     //Hide
-SWITCH_ITEM(LOC(@"NO_ADS"), LOC(@"NO_ADS_DESC"), @"noAds_enabled");
+SWITCH_ITEM2(LOC(@"NO_ADS"), LOC(@"NO_ADS_DESC"), @"noAds_enabled");
 SWITCH_ITEM(LOC(@"PLAY_BACK"), LOC(@"PLAY_BACK_DESC"), @"backgroundPlayback_enabled");
 
     SWITCH_ITEM2(LOC(@"HIDE_HOVER_CARD"), LOC(@"HIDE_HOVER_CARD_DESC"), @"hideHoverCards_enabled");
