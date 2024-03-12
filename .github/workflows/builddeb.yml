@@ -2,6 +2,18 @@ name: Build the deb
 
 on:
   workflow_dispatch:
+    inputs:
+      uyou_version:
+      app_name:
+        description: "Name deb"
+        default: "Hiepvk"
+        required: true
+        type: string
+      upload_artifact:
+        description: "Upload Artifact"
+        default: true
+        required: false
+        type: boolean
     
 jobs:
   build:
@@ -40,7 +52,8 @@ jobs:
           gmake clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
 
       - name: Upload a Build Artifact
+        if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: newdeb
+          name: ${{ inputs.app_name }}
           path: packages/*.deb
