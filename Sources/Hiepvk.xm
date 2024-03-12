@@ -161,10 +161,12 @@ static NSString *accessGroupID() {
 %end
 
 // NOYTPremium - https://github.com/PoomSmart/NoYTPremium/
+// Alert
 %hook YTCommerceEventGroupHandler
 - (void)addEventHandlers {}
 %end
 
+// Full-screen
 %hook YTInterstitialPromoEventGroupHandler
 - (void)addEventHandlers {}
 %end
@@ -183,6 +185,12 @@ static NSString *accessGroupID() {
 - (BOOL)shouldThrottleInterstitial { return YES; }
 %end
 
+// "Try new features" in settings
+%hook YTSettingsSectionItemManager
+- (void)updatePremiumEarlyAccessSectionWithEntry:(id)arg1 {}
+%end
+
+// Survey
 %hook YTSurveyController
 - (void)showSurveyWithRenderer:(id)arg1 surveyParentResponder:(id)arg2 {}
 %end
