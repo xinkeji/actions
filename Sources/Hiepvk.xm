@@ -196,20 +196,20 @@ static NSString *accessGroupID() {
 %end
 
 // Un Shorts - @PoomSmart
-%hook YTIElementRenderer
-- (NSData *)elementData {
-    NSString *description = [self description];
-    if (IS_ENABLED(@"un_shorts_enabled")) {
-    if ([description containsString:@"shorts_shelf.eml"] || [description containsString:@"#shorts"] || [description containsString:@"shorts_video_cell.eml"] || [description containsString:@"6Shorts"]) {
-        if (![description containsString:@"history*"]) {
-            return nil;
-        }
-    }
-}
-    return %orig;
-}
+//%hook YTIElementRenderer
+//- (NSData *)elementData {
+//    NSString *description = [self description];
+//    if (IS_ENABLED(@"un_shorts_enabled")) {
+//    if ([description containsString:@"shorts_shelf.eml"] || [description containsString:@"#shorts"] || [description containsString:@"shorts_video_cell.eml"] || [description containsString:@"6Shorts"]) {
+//        if (![description containsString:@"history*"]) {
+//            return nil;
+//        }
+//    }
+//}
+//    return %orig;
+//}
 
-%end
+//%end
 
 # pragma mark - Shorts controls overlay options
 
