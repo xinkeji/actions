@@ -5,5 +5,5 @@ Description:
 Maintainer: hiepvk
 Author: Hiepvk
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), com.miro.uyou
+Depends: mobilesubstrate (>= 0.9.5000)
 
