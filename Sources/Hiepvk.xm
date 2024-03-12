@@ -247,6 +247,9 @@ static NSString *accessGroupID() {
     if (![allKeys containsObject:@"YouPiPEnabled"]) { 
        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"YouPiPEnabled"]; 
     }
+    if (![allKeys containsObject:@"noAds_enabled"]) { 
+       [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"noAds_enabled"]; 
+    }
     if (![allKeys containsObject:@"backgroundPlayback_enabled"]) { 
        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"backgroundPlayback_enabled"]; 
     }
