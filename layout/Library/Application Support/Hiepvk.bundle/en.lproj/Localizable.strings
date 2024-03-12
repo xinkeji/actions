@@ -10,6 +10,8 @@
 
 // Hide
 
+"NO_ADS" = "Remove ads";
+"NO_ADS_DESC" = "Removes in-app ads.";
 "PLAY_BACK" = "Background playback";
 "PLAY_BACK_DESC" = "Enables background playback.";
 
