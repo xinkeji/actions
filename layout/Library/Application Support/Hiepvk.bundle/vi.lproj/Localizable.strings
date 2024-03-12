@@ -10,7 +10,7 @@
 
 // Hide
 
-"PLAY_BACK" = "Phát nền";
+"PLAY_BACK" = "Phát trong nền";
 "PLAY_BACK_DESC" = "Cho phép phát trong nền";
 
 "HIDE_HOVER_CARD" = "Ẩn video dạng thumbnails (YTNoHoverCards)";
