@@ -26,8 +26,8 @@
 "HIDE_HOVER_CARD" = "Hide End screens hover cards (YTNoHoverCards)";
 "HIDE_HOVER_CARD_DESC" = "Hide the creator End screens (thumbnails) at the end of videos.";
 
-// Shorts controls overlay options
-"SHORTS_CONTROLS_OVERLAY_OPTIONS" = "Shorts controls overlay options";
+// SHORTS
+"SHORTS" = "Shorts";
 
 "UN_SHORTS" = "Hide Shorts";
 "UN_SHORTS_DESC" = "Hides Shorts videos from Homepage, Recommended etc. (Not applied to Watch history)";
