@@ -80,7 +80,7 @@ extern NSBundle *HiepvkBundle();
     ];
     [sectionItems addObject:exitYT];
 
-    //General
+    # pragma mark - General
     SECTION_HEADER(LOC(@"GENERAL"));
 
     SWITCH_ITEM2(LOC(@"NO_ADS"), LOC(@"NO_ADS_DESC"), @"noAds_enabled");
