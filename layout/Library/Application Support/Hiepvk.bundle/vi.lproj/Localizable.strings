@@ -26,8 +26,8 @@
 "HIDE_HOVER_CARD" = "Ẩn video dạng thumbnails (YTNoHoverCards)";
 "HIDE_HOVER_CARD_DESC" = "Ẩn thumbnail của các video đề xuất xuất hiện ở cuối video.";
 
-// Shorts controls overlay options
-"SHORTS_CONTROLS_OVERLAY_OPTIONS" = "Tùy chọn hiển thị trong Shorts";
+// SHORTS
+"SHORTS" = "Shorts";
 
 "UN_SHORTS" = "Ẩn Shorts";
 "UN_SHORTS_DESC" = "Ẩn Shorts khỏi Trang chủ, Được đề xuất, v.v. (Không áp dụng cho Lịch sử xem)";
