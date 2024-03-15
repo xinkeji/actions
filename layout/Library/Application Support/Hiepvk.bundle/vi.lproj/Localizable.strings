@@ -32,8 +32,8 @@
 "UN_SHORTS" = "Ẩn Shorts";
 "UN_SHORTS_DESC" = "Ẩn Shorts khỏi Trang chủ, Được đề xuất, v.v. (Không áp dụng cho Lịch sử xem)";
 
-"HIDE_SUPER_THANKS" = "Ẩn biểu ngữ 'Mua ảnh động Super Thanks'";
-"HIDE_SUPER_THANKS_DESC" = "Ẩn biểu ngữ 'Mua ảnh động Super Thanks'.";
+"HIDE_SUPER_THANKS" = "Ẩn biểu ngữ /"Mua ảnh động Super Thanks/"";
+"HIDE_SUPER_THANKS_DESC" = "Ẩn biểu ngữ /"Mua ảnh động Super Thanks/" trong Shorts.";
 
 "HIDE_SUBCRIPTIONS" = "Ẩn nút Đăng ký kênh";
 "HIDE_SUBCRIPTIONS_DESC" = "Ẩn nút Đăng ký kênh khi tạm dừng Shorts.";
