@@ -89,8 +89,8 @@ extern NSBundle *HiepvkBundle();
     SWITCH_ITEM2(LOC(@"PRE_YT_LOGO"), LOC(@"PRE_YT_LOGO_DESC"), @"premiumYTLogo_enabled");
     SWITCH_ITEM2(LOC(@"HIDE_HOVER_CARD"), LOC(@"HIDE_HOVER_CARD_DESC"), @"hideHoverCards_enabled");
 
-    # pragma mark - Shorts controls overlay options
-    SECTION_HEADER(LOC(@"SHORTS_CONTROLS_OVERLAY_OPTIONS"));
+    # pragma mark - Shorts
+    SECTION_HEADER(LOC(@"SHORTS"));
 
     SWITCH_ITEM(LOC(@"UN_SHORTS"), LOC(@"UN_SHORTS_DESC"), @"un_shorts_enabled");
     SWITCH_ITEM2(LOC(@"HIDE_SUPER_THANKS"), LOC(@"HIDE_SUPER_THANKS_DESC"), @"hideBuySuperThanks_enabled");
