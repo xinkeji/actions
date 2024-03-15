@@ -30,7 +30,7 @@
 "SHORTS_CONTROLS_OVERLAY_OPTIONS" = "Tùy chọn hiển thị trong Shorts";
 
 "UN_SHORTS" = "Ẩn Shorts";
-"UN_SHORTS_DESC" = "Ẩn Shorts ở trang chủ";
+"UN_SHORTS_DESC" = "Ẩn Shorts khỏi Trang chủ, Được đề xuất, v.v. (Không áp dụng cho Lịch sử xem)";
 
 "HIDE_SUPER_THANKS" = "Ẩn biểu ngữ 'Mua ảnh động Super Thanks'";
 "HIDE_SUPER_THANKS_DESC" = "Ẩn biểu ngữ 'Mua ảnh động Super Thanks'.";
