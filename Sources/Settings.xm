@@ -80,10 +80,10 @@ extern NSBundle *HiepvkBundle();
     ];
     [sectionItems addObject:exitYT];
 
-    //Hide
+    //Hide General
+    SECTION_HEADER(LOC(@"GENERAL"));
     SWITCH_ITEM2(LOC(@"NO_ADS"), LOC(@"NO_ADS_DESC"), @"noAds_enabled");
     SWITCH_ITEM(LOC(@"PLAY_BACK"), LOC(@"PLAY_BACK_DESC"), @"backgroundPlayback_enabled");
-
     SWITCH_ITEM2(LOC(@"NO_YT_LOGO"), LOC(@"NO_YT_LOGO_DESC"), @"noYTLogo_enabled");
     SWITCH_ITEM2(LOC(@"PRE_YT_LOGO"), LOC(@"PRE_YT_LOGO_DESC"), @"premiumYTLogo_enabled");
 
