@@ -29,8 +29,8 @@
 // Shorts controls overlay options
 "SHORTS_CONTROLS_OVERLAY_OPTIONS" = "Shorts controls overlay options";
 
-"UN_SHORTS" = "Hide Shorts";
-"UN_SHORTS_DESC" = "Hide Shorts on the home";
+"UN_SHORTS" = "Hide Shorts (YTUnShorts)";
+"UN_SHORTS_DESC" = "Remove Shorts from YouTube feed";
 
 "HIDE_SUPER_THANKS" = "Hide \"Buy Super Thanks\" banner";
 "HIDE_SUPER_THANKS_DESC" = "";
