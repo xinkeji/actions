@@ -8,7 +8,8 @@
 
 "RESTART_YOUTUBE" = "Khởi động lại YouTube để áp dụng các thay đổi";
 
-// Hide
+//GENERAL
+"GENERAL" = "Chung";
 
 "NO_ADS" = "Xoá quảng cáo";
 "NO_ADS_DESC" = "Xoá quảng cáo tróng ứng dụng";
@@ -22,6 +23,9 @@
 
 "HIDE_HOVER_CARD" = "Ẩn video dạng thumbnails (YTNoHoverCards)";
 "HIDE_HOVER_CARD_DESC" = "Ẩn thumbnail của các video đề xuất xuất hiện ở cuối video.";
+
+// Shorts controls overlay options
+"SHORTS_CONTROLS_OVERLAY_OPTIONS" = "Tùy chọn hiển thị trong Shorts";
 
 "UN_SHORTS" = "Ẩn Shorts";
 "UN_SHORTS_DESC" = "Ẩn Shorts ở trang chủ";
