@@ -41,8 +41,8 @@ jobs:
       - name: Checkout SDK
         uses: actions/checkout@main
         with:
-          repository: chrisharper22/sdks
-          ref: main
+          repository: hiepvk/iOS-SDKs
+          ref: master
           sparse-checkout: iPhoneOS16.2.sdk
           path: theos/sdks
           
