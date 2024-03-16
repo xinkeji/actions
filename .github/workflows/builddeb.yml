@@ -1,4 +1,4 @@
-name: Build the deb
+name: Build the DEB
 
 on:
   workflow_dispatch:
@@ -19,7 +19,17 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@main
+        with:
+          repository: hiepvk/YTHiepvk
+          ref: main
+          submodules: recursive
+          
+      - name: Install Dependencies
+        run: brew install ldid dpkg make
 
+      - name: Set PATH environment variable
+        run: echo "$(brew --prefix make)/libexec/gnubin" >> $GITHUB_PATH 
+        
       - name: Checkout theos/theos
         uses: actions/checkout@main
         with:
@@ -28,7 +38,7 @@ jobs:
           submodules: recursive
           path: theos
 
-      - name: Checkout chrisharper22/sdks
+      - name: Checkout SDK
         uses: actions/checkout@main
         with:
           repository: chrisharper22/sdks
@@ -36,16 +46,8 @@ jobs:
           sparse-checkout: iPhoneOS16.2.sdk
           path: theos/sdks
           
-      - name: Checkout PoomSmart/YouTubeHeader
-        uses: actions/checkout@main
-        with:
-          repository: PoomSmart/YouTubeHeader
-          ref: main
-          path: Tweaks/YouTubeHeader
-
       - name: Build Package 
         run: |
-          brew install make xz ldid 
           export THEOS=theos
           gmake clean package FINALPACKAGE=1
           gmake clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless

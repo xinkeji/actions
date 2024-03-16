@@ -1,9 +1,0 @@
-Package: com.vkh.tweaks
-Name: Hiepvk
-Architecture: iphoneos-arm
-Description: 
-Maintainer: hiepvk
-Author: Hiepvk
-Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
-
