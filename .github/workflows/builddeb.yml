@@ -3,7 +3,17 @@ name: Build the DEB
 on:
   workflow_dispatch:
     inputs:
-      app_name:
+      repo_github:
+        description: "Repository Github:"
+        default: "hiepvk/src"
+        required: true
+        type: string
+      ref_github:
+        description: "Ref repository github:"
+        default: "main"
+        required: true
+        type: string
+      deb_name:
         description: "Name deb"
         default: "Hiepvk"
         required: true
@@ -20,8 +30,8 @@ jobs:
     steps:
       - uses: actions/checkout@main
         with:
-          repository: https://github.com/hiepvk/src
-          ref: main
+          repository: ${{ inputs.repo_github }}
+          ref: ${{ inputs.ref_github }}
           submodules: recursive
           
       - name: Install Dependencies
@@ -56,5 +66,5 @@ jobs:
         if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v4.3.1
         with:
-          name: ${{ inputs.app_name }}
+          name: ${{ inputs.deb_name }}
           path: packages/*.deb
