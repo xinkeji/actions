@@ -13,9 +13,29 @@ on:
         default: "main"
         required: true
         type: string
+      sub_repo:
+        description: "Sub repository github: example: user/repository"
+        default: "PoomSmart/YouTubeHeader"
+        required: false
+        type: string
+      sub_ref:
+        description: "Sub ref repository github: example: main, master, v.v"
+        default: "main"
+        required: false
+        type: string
+      sub_path:
+        description: "Sub path repository github: example: abc, xyz"
+        default: "YouTubeHeader"
+        required: false
+        type: string
+      sub_check:
+        description: "Sub Check"
+        default: false
+        required: false
+        type: boolean
       deb_name:
         description: "Name deb"
-        default: "Hiepvk"
+        default: "Hiepvk-deb"
         required: true
         type: string
       upload_artifact:
@@ -34,6 +54,14 @@ jobs:
           ref: ${{ inputs.ref_github }}
           submodules: recursive
           
+      - name: Checkout Sub
+        if: ${{ inputs.sub_check }}
+        uses: actions/checkout@main
+        with:
+          repository: ${{ inputs.sub_repo }}
+          ref: ${{ inputs.sub_ref }}
+          path: ${{ inputs.sub_path }}
+
       - name: Install Dependencies
         run: brew install ldid dpkg make
 
