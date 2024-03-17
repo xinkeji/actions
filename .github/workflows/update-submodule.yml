@@ -1,0 +1,59 @@
+# Update submodule!!
+name: Update submodule!!
+
+#############################
+# Start the job on all push #
+#############################
+on:
+  schedule:
+    - cron: "0 0 */7 * *"
+  workflow_dispatch:
+    inputs:
+      repo_github:
+        description: "Repository, example: user/repository"
+        default: "vkhiep/uYouPlus"
+        required: true
+        type: string
+      ref_github:
+        description: "Ref repository, example: main, master, v.v"
+        default: "main"
+        required: true
+        type: string
+      owner_github:
+        description: "Owner, example: user"
+        default: "vkhiep"
+        required: true
+        type: string
+
+###############
+# Set the Job #
+###############
+jobs:
+  build:
+    name: Update submodules
+    runs-on: ubuntu-latest
+    env:
+      PARENT_REPOSITORY: '${{ inputs.repo_github }}'
+      CHECKOUT_BRANCH: '${{ inputs.ref_github }}'
+      PR_AGAINST_BRANCH: '${{ inputs.ref_github }}'
+      OWNER: '${{ inputs.owner_github }}'
+
+    steps:
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.1
+
+      ####################################
+      # Run the action against code base #
+      ####################################
+      - name: run action
+        id: run_action
+        uses: hiepvk/github-action-create-pr-parent-submodule@main
+        with:
+          github_token: ${{ secrets.RELEASE_HUB_SECRET }}
+          parent_repository: ${{ env.PARENT_REPOSITORY }}
+          checkout_branch: ${{ env.CHECKOUT_BRANCH }}
+          pr_against_branch: ${{ env.PR_AGAINST_BRANCH }}
+          owner: ${{ env.OWNER }}
