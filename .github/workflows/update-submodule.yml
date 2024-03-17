@@ -1,5 +1,5 @@
-# Update submodule!!
-name: Update submodule!!
+# Update submodules!!
+name: Update submodules!!
 
 #############################
 # Start the job on all push #
@@ -11,7 +11,7 @@ on:
     inputs:
       repo_github:
         description: "Repository, example: user/repository"
-        default: "vkhiep/uYouPlus"
+        default: "hiepvk/YTHiepvk"
         required: true
         type: string
       ref_github:
@@ -21,7 +21,7 @@ on:
         type: string
       owner_github:
         description: "Owner, example: user"
-        default: "vkhiep"
+        default: "hiepvk"
         required: true
         type: string
 
