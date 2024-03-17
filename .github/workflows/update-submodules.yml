@@ -59,7 +59,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.1
         with:
-          repository: hiepvk/YTHiepvk
+          repository: hiepvk/src
           ref: main
           submodules: recursive
 
