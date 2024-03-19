@@ -1,4 +1,4 @@
-name: pyzule
+name: Pyzule
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    name: pyzule
+    name: Pyzule
     runs-on: macos-latest
     permissions:
       contents: write
@@ -26,6 +26,7 @@ jobs:
 
       - name: pyzule install
         run: |
+          mkdir ipa && mkdir build
           bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
 
       - name: Download ipa
@@ -37,5 +38,4 @@ jobs:
       - name: Check pyzule
         run: |
           pyzule --help
-          mkdir build
           ls
