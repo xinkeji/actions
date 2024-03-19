@@ -8,6 +8,11 @@ on:
         default: "https://dl.dropboxusercontent.com/scl/fi/7ldc3wdq1ootbmne3tmjl/ytb-19.10.5.ipa?rlkey=kvmtrtx1b8xnyz96598v68ya6&dl=0"
         required: true
         type: string
+      ipa_name:
+        description: "Name App"
+        default: "NameApp"
+        required: true
+        type: string
 
 
 jobs:
@@ -28,7 +33,7 @@ jobs:
         run: |
           mkdir ipa && mkdir build
           bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
-
+          pyzule
       - name: Download ipa
         id: download_ipa
         run: |
