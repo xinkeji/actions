@@ -22,8 +22,13 @@ jobs:
         run: |
           bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
 
+      - name: Download ipa
+        id: download_ipa
+        run: |
+          wget "$IPA_URL" --no-verbose -O ipa/app.ipa
+
       - name: Check pyzule
         run: |
           pyzule --help
-          mkdir ipa
+          mkdir build
           ls
