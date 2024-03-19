@@ -21,7 +21,7 @@ jobs:
       - name: Checkout Main
         uses: actions/checkout@v4.1.1
         with:
-          repository: hiepvk/pyzule
+          repository: hiepvk/pyzu
           ref: main
 
       - name: pyzule install
