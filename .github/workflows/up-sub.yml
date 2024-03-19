@@ -12,6 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          repository: ${{ inputs.repo_github }}
+          ref: ${{ inputs.ref_github }}
           token: ${{ secrets.RELEASE_HUB_SECRET }}
 
       - name: Update submodules
