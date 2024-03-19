@@ -12,8 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: hiepvk/src
-          ref: main
           token: ${{ secrets.RELEASE_HUB_SECRET }}
 
       - name: Update submodules
