@@ -35,7 +35,7 @@ jobs:
           wget "$IPA_URL" --no-verbose -O ipa/app.ipa
         env:
           IPA_URL: ${{ inputs.ipa_url }}
-      - name: Check pyzule
+
+      - name: inject
         run: |
-          pyzule --help
           ls
