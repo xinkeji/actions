@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir ipa && mkdir build
           bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
-          pyzule
+
       - name: Download ipa
         id: download_ipa
         run: |
