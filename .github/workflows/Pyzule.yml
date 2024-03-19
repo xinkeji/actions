@@ -38,4 +38,11 @@ jobs:
 
       - name: inject
         run: |
-          ls
+          pyzule 
+
+      - name: Upload a Build Artifact
+        if: ${{ inputs.upload_artifact }}
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: ${{ inputs.ipa_name }}
+          path: build/*.ipa
