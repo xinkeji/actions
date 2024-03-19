@@ -32,7 +32,8 @@ jobs:
         id: download_ipa
         run: |
           wget "$IPA_URL" --no-verbose -O ipa/app.ipa
-
+        env:
+          IPA_URL: ${{ inputs.ipa_url }}
       - name: Check pyzule
         run: |
           pyzule --help
