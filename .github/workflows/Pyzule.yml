@@ -1,16 +1,16 @@
-name: pyzu
+name: Pyzule
 
 on:
   workflow_dispatch:
     inputs:
       ipa_url:
         description: "Direct URL to the decrypted App ipa."
-        default: "https://dl.dropboxusercontent.com/scl/fi/7ldc3wdq1ootbmne3tmjl/ytb-19.10.5.ipa?rlkey=kvmtrtx1b8xnyz96598v68ya6&dl=0"
+        default: "https://github.com/hiepvk/ipa/releases/download/csc/cam.ipa"
         required: true
         type: string
       tweaks:
         description: "tweaks"
-        default: "tweaks/yt.deb"
+        default: "tweaks/camscanner.dylib"
         required: true
         type: string
       ipa_name:
@@ -22,7 +22,7 @@ on:
 
 jobs:
   build:
-    name: pyzu
+    name: Pyzule run
     runs-on: macos-latest
     permissions:
       contents: write
@@ -46,7 +46,7 @@ jobs:
         env:
           IPA_URL: ${{ inputs.ipa_url }}
 
-      - name: inject
+      - name: Inject
         run: |
           pyzule -i ipa/app.ipa -f ${{ inputs.tweaks }} -u -w -s -o build/${{ inputs.ipa_name }}.ipa
 
