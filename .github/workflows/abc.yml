@@ -26,8 +26,8 @@ jobs:
 
       - name: pyzule install
         run: |
-         bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
+          bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
 
       - name: Check pyzule
         run: |
-         pyzule --help
+          pyzule --help
