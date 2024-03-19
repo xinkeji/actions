@@ -5,12 +5,12 @@ on:
     inputs:
       ipa_url:
         description: "Direct URL to the decrypted App ipa."
-        default: "https://github.com/hiepvk/ipa/releases/download/csc/cam.ipa"
+        default: ""
         required: true
         type: string
       tweaks:
         description: "tweaks"
-        default: "tweaks/camscanner.dylib"
+        default: "tweaks/"
         required: true
         type: string
       ipa_name:
