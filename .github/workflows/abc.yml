@@ -1,0 +1,31 @@
+name: abc
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    name: abc
+    runs-on: macos-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Main
+        uses: actions/checkout@v4.1.1
+        with:
+          repository: hiepvk/pyzule
+          ref: main
+
+      - name: Install Dependencies
+        run: brew install ldid dpkg make
+
+      - name: Set PATH environment variable
+        run: echo "$(brew --prefix make)/libexec/gnubin" >> $GITHUB_PATH
+
+      - name: pyzule install
+        run: bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
+
+      - name: Check pyzule
+        run: pyzule --help
