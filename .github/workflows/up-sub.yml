@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.UPDATE_SUBMODULES_TOKEN }}
+          token: ${{ secrets.RELEASE_HUB_SECRET }}
 
       - name: Update submodules
         run: |
