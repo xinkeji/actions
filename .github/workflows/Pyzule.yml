@@ -10,7 +10,7 @@ on:
         type: string
       tweaks:
         description: "tweaks"
-        default: "tweaks"
+        default: "tweaks/yt.deb"
         required: true
         type: string
       ipa_name:
@@ -48,7 +48,7 @@ jobs:
 
       - name: inject
         run: |
-          pyzule -i main/ipa/app.ipa -f main/${{ inputs.tweaks }} -u -w -s -o main/build/${{ inputs.ipa_name }}.ipa
+          pyzule -i ${{ github.workflow }}/ipa/app.ipa -f ${{ github.workflow }}/${{ inputs.tweaks }} -u -w -s -o ${{ github.workflow }}/build/${{ inputs.ipa_name }}.ipa
 
       - name: Upload a Build Artifact
         if: ${{ inputs.upload_artifact }}
