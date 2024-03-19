@@ -25,5 +25,5 @@ jobs:
       - name: Check pyzule
         run: |
           pyzule --help
-          ls
           mkdir ipa
+          ls
