@@ -1,4 +1,4 @@
-name: Pyzule
+name: pyzu
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ on:
 
 jobs:
   build:
-    name: Pyzule
+    name: pyzu
     runs-on: macos-latest
     permissions:
       contents: write
@@ -48,7 +48,7 @@ jobs:
 
       - name: inject
         run: |
-          pyzule -i ${{ github.workflow }}/ipa/app.ipa -f ${{ github.workflow }}/${{ inputs.tweaks }} -u -w -s -o ${{ github.workflow }}/build/${{ inputs.ipa_name }}.ipa
+          pyzule -i /pyzu/main/ipa/app.ipa -f /pyzu/main/${{ inputs.tweaks }} -u -w -s -o /pyzu/main/build/${{ inputs.ipa_name }}.ipa
 
       - name: Upload a Build Artifact
         if: ${{ inputs.upload_artifact }}
