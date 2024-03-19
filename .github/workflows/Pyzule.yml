@@ -55,4 +55,4 @@ jobs:
         uses: actions/upload-artifact@v4.3.1
         with:
           name: ${{ inputs.ipa_name }}
-          path: build/*.ipa
+          path: build/${{ inputs.ipa_name }}.ipa
