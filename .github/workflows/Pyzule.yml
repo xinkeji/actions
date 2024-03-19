@@ -38,7 +38,7 @@ jobs:
 
       - name: inject
         run: |
-          pyzule -i ~/ipa/app.ipa -f ${{ inputs.tweaks }} -u -s
+          pyzule -i ~/ipa/app.ipa -f ${{ inputs.tweaks }} -u -w -s -o ~/build/${{ inputs.ipa_name }}.ipa
 
       - name: Upload a Build Artifact
         if: ${{ inputs.upload_artifact }}
