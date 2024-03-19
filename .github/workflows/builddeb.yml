@@ -33,6 +33,11 @@ on:
         default: false
         required: false
         type: boolean
+      sdk_ver:
+        description: "iPhoneOS SDK"
+        default: "16.5"
+        required: true
+        type: string
       deb_name:
         description: "Name deb"
         default: "Hiepvk-deb"
@@ -81,7 +86,7 @@ jobs:
         with:
           repository: hiepvk/iOS-SDKs
           ref: master
-          sparse-checkout: iPhoneOS16.2.sdk
+          sparse-checkout: iPhoneOS${{ inputs.sdk_ver }}.sdk
           path: theos/sdks
           
       - name: Build Package 
