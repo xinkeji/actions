@@ -1,6 +1,6 @@
 #Template for whenever I refresh the main branch. and even need to re-add the submodules afterwards.
 
-name: Update test
+name: Added Submodule - Bundles
 
 on:
   workflow_dispatch:
@@ -22,16 +22,6 @@ on:
         type: string
       add_sub_check:
         description: "Add sub check"
-        default: false
-        required: false
-        type: boolean
-      up_sub:
-        description: "Update submodule, example: Tweaks/YTABConfig, Non for All"
-        default: ""
-        required: false
-        type: string
-      up_sub_check:
-        description: "Update sub check"
         default: false
         required: false
         type: boolean
@@ -83,9 +73,8 @@ jobs:
           git push origin
 
       - name: Update submodules
-        if: ${{ inputs.up_sub_check }}
         run: |
-          git submodule update --remote --init --recursive ${{ inputs.up_sub }}
+          git submodule update --remote --init --recursive
           git commit --all -m "[submodules] Update submodules to the latest commit" && git push || echo "No changes were made"
         continue-on-error: true
 
