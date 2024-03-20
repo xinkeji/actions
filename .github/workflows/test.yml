@@ -64,8 +64,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.1
         with:
-          repository: hiepvk/test
-          ref: main
+          repository: ${{ inputs.repo_github }}
+          ref: ${{ inputs.ref_github }}
           token: ${{ secrets.RELEASE_HUB_SECRET }}
           submodules: recursive
 
