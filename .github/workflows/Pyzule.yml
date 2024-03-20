@@ -5,7 +5,7 @@ on:
     inputs:
       repo_github:
         description: "Repository github: example: user/repository"
-        default: "hiepvk/src"
+        default: "hiepvk/puzu"
         required: true
         type: string
       ref_github:
@@ -41,8 +41,8 @@ jobs:
       - name: Checkout Main
         uses: actions/checkout@v4.1.1
         with:
-          repository: hiepvk/pyzu
-          ref: main
+          repository: ${{ inputs.repo_github }}
+          ref: ${{ inputs.ref_github }}
 
       - name: Pyzule Install
         run: |
