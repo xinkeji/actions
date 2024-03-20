@@ -34,12 +34,12 @@ on:
         required: false
         type: boolean
       sdk_ver:
-        description: "iPhoneOS SDK"
+        description: "iPhoneOS SDK version"
         default: "16.5"
         required: true
         type: string
       deb_name:
-        description: "Name deb"
+        description: "Modify the name of the app on the Home Screen."
         default: "Hiepvk-deb"
         required: true
         type: string
