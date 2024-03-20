@@ -80,7 +80,7 @@ jobs:
       - name: Update submodules
         if: ${{ inputs.up_sub_check }}
         run: |
-          git submodule update --init --recursive --remote ${{ inputs.up_sub }}
+          git submodule update --remote --init --recursive ${{ inputs.up_sub }}
           git add .
           git commit -m "updated submodules"
           git push origin
