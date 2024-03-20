@@ -59,6 +59,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.1
         with:
+          repository: hiepvk/src
+          ref: main
+          token: ${{ secrets.RELEASE_HUB_SECRET }}
           submodules: recursive
 
       - name: Set up Git
