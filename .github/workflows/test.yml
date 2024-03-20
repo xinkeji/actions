@@ -45,6 +45,11 @@ on:
         default: ""
         required: false
         type: string
+      mkdir_bundle:
+        description: "mkdir bundle, example: mkdir Bundles"
+        default: ""
+        required: false
+        type: string
       add_bundle_check:
         description: "Add bundle check"
         default: false
@@ -87,6 +92,7 @@ jobs:
       - name: Make .bundle files
         if: ${{ inputs.add_bundle_check }}
         run: |
+          ${{ inputs.mkdir_bundle }}
           cd ${{ inputs.dir_bundle }}
           ln -s ../${{ inputs.add_dir_sub }}/layout/Library/Application\ Support/${{ inputs.add_bundle }} ${{ inputs.add_bundle }}
           git add .
