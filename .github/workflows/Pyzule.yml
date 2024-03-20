@@ -3,6 +3,16 @@ name: Pyzule
 on:
   workflow_dispatch:
     inputs:
+      repo_github:
+        description: "Repository github: example: user/repository"
+        default: "hiepvk/src"
+        required: true
+        type: string
+      ref_github:
+        description: "Ref repository github: example: main, master, v.v"
+        default: "main"
+        required: true
+        type: string
       ipa_url:
         description: "Direct URL to the decrypted App ipa."
         default: ""
