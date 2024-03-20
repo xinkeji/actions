@@ -34,12 +34,12 @@ jobs:
           repository: hiepvk/pyzu
           ref: main
 
-      - name: pyzule install
+      - name: Pyzule Install
         run: |
           mkdir ipa && mkdir build
           bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
 
-      - name: Download ipa
+      - name: Download IPA
         id: download_ipa
         run: |
           wget "$IPA_URL" --no-verbose -O ipa/app.ipa
