@@ -67,6 +67,8 @@ jobs:
           repository: ${{ inputs.repo_github }}
           ref: ${{ inputs.ref_github }}
           token: ${{ secrets.RELEASE_HUB_SECRET }}
+          submodules: true
+          fetch-depth: 0
 
       - name: Set up Git
         run: |
@@ -83,8 +85,8 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --remote --init --recursive
-          git commit --all -m "[submodules] Update submodules to the latest commit" && git push || echo "No changes were made"
+          git submodule update --remote
+          git commit --all -m "Update submodules to the latest commit" && git push || echo "No changes were made"
         continue-on-error: true
 
       - name: Make .bundle files
