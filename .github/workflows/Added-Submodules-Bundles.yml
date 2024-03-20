@@ -67,7 +67,6 @@ jobs:
           repository: ${{ inputs.repo_github }}
           ref: ${{ inputs.ref_github }}
           token: ${{ secrets.RELEASE_HUB_SECRET }}
-          submodules: recursive
 
       - name: Set up Git
         run: |
