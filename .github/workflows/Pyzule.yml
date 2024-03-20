@@ -9,7 +9,7 @@ on:
         required: true
         type: string
       tweaks:
-        description: "tweaks"
+        description: "Folder deb, dylib, example: tweaks/xx.deb tw/xx.dylib"
         default: "tweaks/"
         required: true
         type: string
