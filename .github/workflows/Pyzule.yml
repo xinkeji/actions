@@ -65,3 +65,15 @@ jobs:
         with:
           name: ${{ inputs.ipa_name }}
           path: build/${{ inputs.ipa_name }}.ipa
+
+      - name: Create Release
+        id: create_release
+        uses: hiepvk/action-gh-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRAFT: ${{ inputs.create_release }}
+        with:
+          tag_name: ${{ inputs.ipa_name }}
+          name: ${{ inputs.ipa_name }}
+          files: build/${{ inputs.ipa_name }}.ipa
+          draft: ${{ env.DRAFT }}
