@@ -28,6 +28,16 @@ on:
         default: "NameApp"
         required: true
         type: string
+      create_release:
+        description: "Create a draft release"
+        default: true
+        required: false
+        type: boolean
+      upload_artifact:
+        description: "Upload Artifact"
+        default: true
+        required: false
+        type: boolean
 
 
 jobs:
