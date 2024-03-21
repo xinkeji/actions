@@ -71,6 +71,7 @@ jobs:
           pyzule -i ipa/app.ipa -f ${{ inputs.tweaks }} -u -w -s -o build/${{ inputs.ipa_name }}.ipa
 
       - name: Upload a Build Artifact
+        if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v4.3.1
         with:
           name: ${{ inputs.ipa_name }}
