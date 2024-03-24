@@ -20,7 +20,7 @@ on:
         type: string
       tweaks:
         description: "Folder deb, dylib, example: tweaks/xx.deb tw/xx.dylib"
-        default: "tweaks/"
+        default: "tweaks/libsubstates.dylib"
         required: true
         type: string
       ipa_name:
